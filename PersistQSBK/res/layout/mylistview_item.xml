@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDE4D6"
+    android:padding="3dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/listview_item_background"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="12dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/Item_UserHead"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/default_users_avatar" />
+
+            <TextView
+                android:id="@+id/Item_UserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="UserName"
+                android:singleLine="true"
+                android:textColor="#815F3D"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Item_MainText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:text="　　一日，将军潜入花木兰帐内欲行不归，强行要上木兰姐姐，就在这时，将军忽然指着花木兰大叫一声：你~你~你~竟然是个女的......"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/Item_MainImg"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/default_content_pic" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/Item_Up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_vote_enable"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/Item_Up_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/icon_for_enable" />
+
+                <TextView
+                    android:id="@+id/Item_Up_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:text="9999"
+                    android:textColor="#815F3D"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Item_Down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/Item_Up"
+                android:background="@drawable/button_vote_enable"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/Item_Down_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/icon_against_enable" />
+
+                <TextView
+                    android:id="@+id/Item_Down_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:text="9999"
+                    android:textColor="#815F3D"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Item_Share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/button_vote_enable"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/Item_Share_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="分享"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/icon_fav_enable" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_toLeftOf="@+id/Item_Share"
+                android:background="@drawable/button_comment"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+
+                <TextView
+                    android:id="@+id/Item_ShareNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:text="99"
+                    android:textColor="#815F3D"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

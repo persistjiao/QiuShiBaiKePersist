@@ -1,0 +1,7 @@
+# 
+# This is global configuration of our application
+# Example key=value
+#
+
+#showGuide 是否要展示向导图，引导界面，0 关闭，1开启。
+showGuide=1

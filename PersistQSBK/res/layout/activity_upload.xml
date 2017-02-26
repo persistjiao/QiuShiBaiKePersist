@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDE4D6"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/icon_close_large" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="糗事投稿"
+            android:textColor="#8B5742"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/UpLoadEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="5dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/icon_send" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/block_post_background"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="19dp"
+        android:paddingTop="10dp" >
+
+        <EditText
+            android:id="@+id/neirongEdit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/camera"
+            android:background="#00000000"
+            android:gravity="start"
+            android:hint="分享我的真实糗事 您投递的糗事会在其他糗友审核之后发表，审核标准为：阵势有笑点；不包含政治、色情；不包含邮件、电话、地址等隐私信息；人脸可打码；转载请注明出处。内容版权归糗事百科网站所有。\n\n eoeAndroid3群苦涩，QQ：534429149"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/icon_camera" />
+
+        <ImageView
+            android:id="@+id/album"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/camera"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/camera"
+            android:src="@drawable/icon_album" />
+    </RelativeLayout>
+
+</LinearLayout>

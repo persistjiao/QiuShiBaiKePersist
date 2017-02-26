@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="textColor">#815F3D</string>
+    <string name="app_name">苦涩糗事百科</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_ashamed_detail">AshamedDetailActivity</string>
+    <string name="title_activity_send_comment">SendCommentActivity</string>
+
+</resources>

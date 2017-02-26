@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/Near_Img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:paddingBottom="7dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:paddingTop="7dp"
+            android:src="@drawable/default_users_avatar" />
+
+        <TextView
+            android:id="@+id/Near_Distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:text="0.1km | 1天前"
+            android:textColor="#999999"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/Near_UserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/Near_Distance"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/Near_Distance"
+            android:layout_toRightOf="@+id/Near_Img"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:text="用户名"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/Near_Sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Near_UserName"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/Near_Img"
+            android:background="@drawable/nearby_gender_male"
+            android:text="22"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/Near_UserInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/Near_Img"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/Near_Img"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:text="用户介绍"
+            android:textColor="#999999"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Near_Img"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/comment_divider_line" />
+    </RelativeLayout>
+
+</RelativeLayout>

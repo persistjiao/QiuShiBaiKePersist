@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.persist.persistqiushibaike"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.persist.persistqiushibaike.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.persist.persistqiushibaike.SettingActivity" >
+        </activity>
+        <activity android:name="com.persist.persistqiushibaike.LoginActivity" >
+        </activity>
+        <activity android:name="com.persist.persistqiushibaike.RegistetActivity" >
+        </activity>
+        <activity android:name="com.persist.persistqiushibaike.AboutActivity" >
+        </activity>
+        <activity android:name="com.persist.persistqiushibaike.Setting_yijianActivity" >
+        </activity>
+        <activity android:name="com.persist.persistqiushibaike.UserInfoActivity" >
+        </activity>
+        <activity
+            android:name="com.persist.persistqiushibaike.UploadActivity"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity android:name="com.persist.persistqiushibaike.AshamedDetailActivity" >
+        </activity>
+        <activity android:name="com.persist.persistqiushibaike.CameralActivity" >
+        </activity>
+        <activity android:name="com.persist.persistqiushibaike.PhotoAct" >
+        </activity>
+        <activity
+            android:name="com.persist.persistqiushibaike.SendCommentActivity"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity android:name="com.persist.persistqiushibaike.AuditActivity" >
+        </activity>
+        
+        <meta-data
+            android:name="com.appkefu.lib.appkey"
+            android:value="5c11193ea35619573c8df1e44b38772a" />
+        <!-- 聊天窗口, 可通过修改layout文件appkefu_chat_activity.xml自定义窗口UI -->
+        <activity android:name="com.appkefu.lib.ui.activity.KFChatActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <!-- 客服个人资料窗口 -->
+        <activity android:name="com.appkefu.lib.ui.activity.KFProfileActivity" />
+        <!-- 验证消息窗口，可通过修改layout文件appkefu_activity_subscribe_notification.xml自定义窗口UI -->
+        <activity android:name="com.appkefu.lib.ui.activity.KFSubscribeNotificationActivity" />
+        <!-- 选择图片 -->
+        <activity
+            android:name="com.appkefu.lib.ui.activity.KFSelectPicActivity"
+            android:theme="@style/appkefu_dialog_style_bottom" />
+        <activity android:name="com.appkefu.lib.ui.activity.KFMUCChatActivity" />
+        <activity android:name="com.appkefu.lib.ui.activity.KFMUCProfileActivity" />
+        <activity android:name="com.appkefu.lib.ui.activity.KFMUCInvitationNotificationActivity" />
+
+        <!-- 发送语音辅助service -->
+        <service
+            android:name="com.appkefu.lib.soundrecorder.KFRecorderService"
+            android:exported="false" >
+        </service>
+
+        <!-- 主service -->
+        <service
+            android:name="com.appkefu.lib.service.KFMainService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.appkefu.lib.action.CONNECT" />
+                <action android:name="com.appkefu.lib.action.DISCONNECT" />
+                <action android:name="com.appkefu.lib.action.TOGGLE" />
+                <action android:name="com.appkefu.lib.action.SEND" />
+                <action android:name="com.appkefu.lib.action.NETWORK_STATUS_CHANGED" />
+                <action android:name="com.appkefu.lib.action.XMPP.MESSAGE_RECEIVED" />
+                <action android:name="com.appkefu.lib.action.PRESENCE_CHANGED" />
+                <action android:name="com.appkefu.lib.action.MUC_INVITATION" />
+            </intent-filter>
+        </service>
+
+        <!--  -->
+        <receiver
+            android:name="com.appkefu.lib.receivers.KFPublicIntentReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.appkefu.lib.action.CONNECT" />
+                <action android:name="com.appkefu.lib.action.DISCONNECT" />
+                <action android:name="com.appkefu.lib.action.TOGGLE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 开机自动建立连接 -->
+        <receiver android:name="com.appkefu.lib.receivers.KFBootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 连接电源自动建立连接 -->
+        <receiver android:name="com.appkefu.lib.receivers.KFPowerReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听网络变化 -->
+        <receiver
+            android:name="com.appkefu.lib.receivers.KFNetworkConnectivityReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.PACKAGE_RESTARTED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 检测链接状态 -->
+        <receiver android:name="com.appkefu.lib.receivers.KFAlarmReceiver" >
+            <intent-filter>
+                <action android:name="com.appkefu.lib.action.LOGIN_ALARM" />
+            </intent-filter>
+        </receiver>
+        
+    </application>
+
+</manifest>

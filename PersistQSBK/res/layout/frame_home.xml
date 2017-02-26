@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDE4D6"
+    android:orientation="vertical"
+    android:paddingBottom="0dp"
+    android:paddingTop="0dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bar_bg"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp" >
+
+        <ImageView
+            android:id="@+id/Menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/side_icon" />
+
+        <ImageView
+            android:id="@+id/SendAshamed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="5dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/icon_post_enable" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/top_tab_background3"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TopMenuOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/top_tab_active"
+                    android:gravity="center"
+                    android:text="干货"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/TopMenuTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="嫩草"
+                    android:textColor="#815F3D" />
+
+                <TextView
+                    android:id="@+id/TopMenuThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="文字"
+                    android:textColor="#815F3D" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/load_progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="10dp" >
+
+        <ProgressBar
+            style="@style/myProgressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="拼命加载中..."
+            android:textColor="#815F3D"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/HomeNoValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:text="暂无糗事哦，快快点击右上角做第一个发表糗事的人吧~"
+        android:textColor="#815F3D"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/HomeGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EDE4D6"
+        android:orientation="vertical"
+        android:visibility="gone" >
+    </LinearLayout>
+
+</LinearLayout>
